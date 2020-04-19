@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { getVocabs } from './parser';
+import VocabList from './VocabList';
 
+import './reset.scss';
 import './index.scss';
 
 class App extends React.Component {
-    render(){
-        const vocab = getVocabs();
-        return(
-            <div className="class">Baozii Project</div>
+    render() {
+        return (
+            <div className="app">
+                <VocabList />
+            </div>
         )
     }
 }

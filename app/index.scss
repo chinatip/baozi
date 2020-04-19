@@ -1,3 +1,22 @@
-.class {
-    background: red;
+.app {
+    
+}
+
+.Vocab {
+    &__Container {
+        background: gray;
+        padding: 20px;
+    }
+
+    &__Row {
+        display: block;
+        margin: 5px 0;
+    }
+
+    &__Group {
+        &Number {
+            margin: 10px 0 0 0;
+            font-size: 20px;
+        }
+    }
 }
