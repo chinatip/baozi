@@ -198,7 +198,7 @@ eval("/* WEBPACK VAR INJECTION */(function(global) {/*!\n * The buffer module fr
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".Vocab__Container {\\n  background: gray;\\n  padding: 20px; }\\n\\n.Vocab__Row {\\n  display: block;\\n  margin: 5px 0; }\\n\\n.Vocab__GroupNumber {\\n  margin: 10px 0 0 0;\\n  font-size: 20px; }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./app/index.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".Vocab__Container {\\n  background: gray;\\n  padding: 20px; }\\n\\n.Vocab__Row {\\n  display: block;\\n  margin: 5px 0;\\n  font-size: 52px; }\\n\\n.Vocab__GroupNumber {\\n  margin: 10px 0 0 0;\\n  font-size: 20px; }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./app/index.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
