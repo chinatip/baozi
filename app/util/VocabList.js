@@ -1,8 +1,8 @@
 import React from 'react';
-import { parse } from './parser';
+import { parseBookData } from './Parser';
 
 export const VocabList = () => {
-    const { group, lesson } = parse();
+    const { group, lesson } = parseBookData();
 
     return (
         <div className="Vocab__Container">
@@ -10,7 +10,7 @@ export const VocabList = () => {
                 return (
                     <div className="Vocab__Group">
                         <span className="Vocab__GroupNumber">{i}</span>
-                        {renderGroup(i, group[i])}
+                        {renderGroup(group[i])}
                     </div>
                 );
             })}
@@ -18,7 +18,7 @@ export const VocabList = () => {
     )
 };
 
-const renderGroup = (groupNumber, group) => {
+const renderGroup = (group) => {
     return group.map(x => renderRow(x));
 }
 

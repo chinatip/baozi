@@ -1,16 +1,16 @@
 import spreadsheet from '../data/chinese_vocab.xlsx';
 import xlsx from 'xlsx';
 
-export const parse = () => {
+export const parseBookData = () => {
     try {
         const csvString = xlsx.utils.sheet_to_csv(spreadsheet.Sheets['vocab']);
-        return formatData(csvString);
+        return formatBookData(csvString);
     } catch(ex) {
         console.log(ex);
     }
 }
 
-const formatData = (text) => {
+const formatBookData = (text) => {
     const json = text.split("\n");
     
     const vocabs = {
