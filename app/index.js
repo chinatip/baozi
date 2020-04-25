@@ -8,15 +8,18 @@ import './index.scss';
 import Menu from './common/Menu';
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            pageState: 'Vocabulary',
+        }
+    }
     render() {
-        const pageState = 'default';
-        const changePage = (page) => {
-            pageState = page;
-        };
+        const changePage = (page) => this.setState({ pageState: page });
 
         return (
             <div className="app">
-                <Menu changePage={changePage} pageState />
+                <Menu changePage={changePage} pageState={this.state.pageState} />
                 <VocabList />
             </div>
         )

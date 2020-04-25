@@ -1,21 +1,27 @@
 import React from 'react';
 
-const Menu = ({ pageState, updatePageState }) => {
-    const onClick = (page) => updatePageState(page);
+const Menu = ({ pageState, changePage }) => {
+    const onClick = (e) => changePage(e.target.value);
     
     return (
         <div className="MenuContainer">
             <div className="Burger">
-                <select id="Dropdown">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">Audi</option>
-                </select>
+                <PageDropdown onClick={onClick}/>
             </div>
             <span id="PageName">{pageState}</span>
         </div>
     );
+};
+
+const PageDropdown = ({ onClick }) => {
+    const pages = ['Vocabulary', 'Practice', 'Flashcard'];
+    const option = (value, i) => <option key={i} value={value}>{value}</option>;
+
+    return (
+        <select id="Dropdown" onChange={onClick}>
+            { pages.map((p, i) => option(p, i))}
+        </select>
+    )
 };
 
 export default Menu;

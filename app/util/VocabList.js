@@ -25,7 +25,7 @@ const renderGroup = (group) => {
 const renderRow = ({ word, pinyin, definition, lesson }) => {
     return (
         <span className="Vocab__Row">
-            {word}
+            {word}{pinyin}{definition}{lesson}
         </span>
     )
 }
