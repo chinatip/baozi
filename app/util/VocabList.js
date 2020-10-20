@@ -5,12 +5,14 @@ export const VocabList = () => {
     const { group, lesson } = parseBookData();
 
     return (
-        <div className="Vocab__Container">
+        <div className="VocabList">
             { lesson.map(i => {
                 return (
-                    <div className="Vocab__Group">
-                        <span className="Vocab__GroupNumber">{i}</span>
+                    <div className="Vocab">
+                        <span className="Vocab__LessonNumber">{i}</span>
                         {renderGroup(group[i])}
+                        <hr></hr>
+                        <br></br>
                     </div>
                 );
             })}
@@ -25,7 +27,9 @@ const renderGroup = (group) => {
 const renderRow = ({ word, pinyin, definition, lesson }) => {
     return (
         <span className="Vocab__Row">
-            {word}{pinyin}{definition}{lesson}
+            <div className="Vocab__Row--word VocabCol">{word}</div>
+            <div className="Vocab__Row--pinyin VocabCol">{pinyin}</div>
+            <div className="Vocab__Row--definition VocabCol">{definition}</div>
         </span>
     )
 }
