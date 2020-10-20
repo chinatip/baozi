@@ -1,22 +1,36 @@
-.app {
-    
+body {
+    font-size: 100%;
+    background: gray;
+}
+
+.MenuContainer {
+    font-size: 4em;
+}
+
+.Burger, .DropDown {
+    font-size: 1em;
+}
+
+.VocabList {
+    padding: 20px;
 }
 
 .Vocab {
-    &__Container {
-        background: gray;
-        padding: 20px;
+    &__LessonNumber {
+        margin: 10px 0 0 0;
+        font-size: 4em;
     }
 
     &__Row {
-        display: block;
-        margin: 5px 0;
+        display: flex;
+        font-size: 4em;
+        line-height: 2em;
+        text-align: left;
     }
+}
 
-    &__Group {
-        &Number {
-            margin: 10px 0 0 0;
-            font-size: 20px;
-        }
-    }
+.VocabCol {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
 }
